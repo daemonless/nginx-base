@@ -1,0 +1,14 @@
+#!/bin/sh
+# Set nginx directory ownership to bsd user (PUID/PGID)
+
+echo "[nginx-perms] Setting nginx directory ownership"
+
+chown -R bsd:bsd /var/log/nginx
+chown -R bsd:bsd /usr/local/www/html 2>/dev/null || true
+chown -R bsd:bsd /var/tmp/nginx 2>/dev/null || true
+
+# Fix /var/run for nginx pid file (using : > instead of touch)
+: > /var/run/nginx.pid
+chown bsd:bsd /var/run/nginx.pid
+
+echo "[nginx-perms] Nginx directories configured for bsd user"

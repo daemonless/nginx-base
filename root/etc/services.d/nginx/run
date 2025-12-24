@@ -1,0 +1,9 @@
+#!/bin/sh
+# nginx s6 service - master runs as root to bind port 80
+# worker processes run as bsd user via 'user bsd;' in nginx.conf
+
+# Signal readiness when the port is responsive
+s6-ready-when fetch -qo /dev/null http://localhost:80/
+
+# Start Nginx in foreground
+exec /usr/local/sbin/nginx -g "daemon off;"
