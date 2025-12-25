@@ -2,19 +2,22 @@ ARG BASE_VERSION=15
 FROM ghcr.io/daemonless/base:${BASE_VERSION}
 
 ARG FREEBSD_ARCH=amd64
+ARG PACKAGES="nginx"
+
 LABEL org.opencontainers.image.title="nginx-base" \
-      org.opencontainers.image.description="FreeBSD nginx base image with s6 supervision" \
-      org.opencontainers.image.source="https://github.com/daemonless/nginx-base" \
-      org.opencontainers.image.url="https://nginx.org/" \
-      org.opencontainers.image.documentation="https://nginx.org/en/docs/" \
-      org.opencontainers.image.licenses="BSD-2-Clause" \
-      org.opencontainers.image.vendor="daemonless" \
-      org.opencontainers.image.authors="daemonless"
+    org.opencontainers.image.description="FreeBSD nginx base image with s6 supervision" \
+    org.opencontainers.image.source="https://github.com/daemonless/nginx-base" \
+    org.opencontainers.image.url="https://nginx.org/" \
+    org.opencontainers.image.documentation="https://nginx.org/en/docs/" \
+    org.opencontainers.image.licenses="BSD-2-Clause" \
+    org.opencontainers.image.vendor="daemonless" \
+    org.opencontainers.image.authors="daemonless" \
+    io.daemonless.packages="${PACKAGES}"
 
 # Install nginx
 # Note: umask 022 ensures directories are created with correct permissions
 RUN umask 022 && pkg update && \
-    pkg install -y nginx && \
+    pkg install -y ${PACKAGES} && \
     pkg clean -ay && \
     rm -rf /var/cache/pkg/* /var/db/pkg/repos/*
 
