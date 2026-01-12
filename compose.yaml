@@ -1,0 +1,15 @@
+name: nginx-base
+
+x-daemonless:
+  title: "Nginx Base"
+  icon: ":simple-nginx:"
+  category: "Base"
+  description: "Shared base image for Nginx-based applications."
+  upstream_url: "https://github.com/daemonless/nginx-base"
+  web_url: "https://nginx.org/"
+  user: "root"
+  upstream_binary: false
+  
+  docs: {}
+
+services: {}

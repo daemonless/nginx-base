@@ -1,39 +1,64 @@
-# nginx-base-image
+# Nginx Base
 
-An extended base image pre-configured with **nginx** and s6 supervision for serving web applications on FreeBSD.
+Shared base image for Nginx-based applications.
 
-## Overview
+| | |
+|---|---|
+| **Registry** | `ghcr.io/daemonless/nginx-base` |
+| **Source** | [https://github.com/daemonless/nginx-base](https://github.com/daemonless/nginx-base) |
+| **Website** | [https://nginx.org/](https://nginx.org/) |
 
-This image extends `base-image` by adding a pre-configured nginx installation. It is designed to be a "ready-to-go" platform for PHP, PHP-FPM, or static web applications.
+## Deployment
 
-## Features
+### Podman Compose
 
-- **Inherits all `base-image` features** (s6, PUID/PGID, VNET).
-- **Pre-configured nginx**: Service is defined and ready to serve files from `/usr/local/www/html`.
-- **Automatic Permissions**: Logs and web directories are correctly permissioned at startup.
-
-## Usage (for Image Developers)
-
-Use this if your application requires a web server:
-
-```dockerfile
-FROM ghcr.io/daemonless/nginx-base-image:15
-
-# Add your web files
-COPY my-site/ /usr/local/www/html/
-
-# Optional: Add custom nginx config
-COPY my-nginx.conf /usr/local/etc/nginx/nginx.conf
+```yaml
+services:
+  nginx-base:
+    image: ghcr.io/daemonless/nginx-base:latest
+    container_name: nginx-base
+    environment:
+    volumes:
+    ports:
+    restart: unless-stopped
 ```
 
-## Exposed Ports
+### Podman CLI
 
-- `80`: Standard HTTP.
-- `443`: HTTPS.
+```bash
+podman run -d --name nginx-base \
+  ghcr.io/daemonless/nginx-base:latest
+```
 
-## Directory Structure
+### Ansible
 
-- `/usr/local/www/html`: Default web root.
-- `/var/log/nginx`: nginx log directory.
-- `/usr/local/etc/nginx`: nginx configuration files.
-<!-- Trigger build -->
+```yaml
+- name: Deploy nginx-base
+  containers.podman.podman_container:
+    name: nginx-base
+    image: ghcr.io/daemonless/nginx-base:latest
+    state: started
+    restart_policy: always
+```
+
+## Configuration
+
+### Environment Variables
+
+| Variable | Default | Description |
+|----------|---------|-------------|
+
+### Volumes
+
+| Path | Description |
+|------|-------------|
+
+### Ports
+
+| Port | Protocol | Description |
+|------|----------|-------------|
+
+## Notes
+
+- **User:** `root` (UID/GID set via PUID/PGID)
+- **Base:** Built on `ghcr.io/daemonless/base` (FreeBSD)

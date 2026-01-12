@@ -13,6 +13,7 @@ LABEL org.opencontainers.image.title="nginx-base" \
     org.opencontainers.image.vendor="daemonless" \
     org.opencontainers.image.authors="daemonless" \
     io.daemonless.type="base" \
+    io.daemonless.category="Base" \
     io.daemonless.packages="${PACKAGES}"
 
 # Install nginx
