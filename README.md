@@ -17,9 +17,6 @@ services:
   nginx-base:
     image: ghcr.io/daemonless/nginx-base:latest
     container_name: nginx-base
-    environment:
-    volumes:
-    ports:
     restart: unless-stopped
 ```
 
@@ -42,21 +39,6 @@ podman run -d --name nginx-base \
 ```
 
 ## Configuration
-
-### Environment Variables
-
-| Variable | Default | Description |
-|----------|---------|-------------|
-
-### Volumes
-
-| Path | Description |
-|------|-------------|
-
-### Ports
-
-| Port | Protocol | Description |
-|------|----------|-------------|
 
 ## Notes
 
