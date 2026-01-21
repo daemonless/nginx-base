@@ -10,6 +10,7 @@ Shared base image for Nginx-based applications.
 | | |
 |---|---|
 | **Registry** | `ghcr.io/daemonless/nginx-base` |
+| **Docs** | [daemonless.io/images/nginx-base](https://daemonless.io/images/nginx-base/) |
 | **Source** | [https://github.com/daemonless/nginx-base](https://github.com/daemonless/nginx-base) |
 | **Website** | [https://nginx.org/](https://nginx.org/) |
 
