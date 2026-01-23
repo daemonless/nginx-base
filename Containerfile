@@ -32,7 +32,7 @@ COPY root/ /
 # Make scripts executable
 RUN chmod +x /etc/services.d/nginx/run /etc/cont-init.d/* 2>/dev/null || true
 
-# Set up s6 service link
+STOPSIGNAL SIGQUIT
 
 EXPOSE 80 443
 
