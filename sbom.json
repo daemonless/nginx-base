@@ -1,12 +1,12 @@
 {
   "image": "nginx-base",
-  "generated": "2026-02-06T00:18:51Z",
+  "generated": "2026-02-13T12:12:46Z",
   "tags": {
     "15-latest": {
       "arch": "amd64",
       "app_version": "15.0",
-      "source": "upstream-binary",
-      "generated": "2026-02-06T00:09:54Z",
+      "source": "upstream",
+      "generated": "2026-02-13T12:05:52Z",
       "packages": {
         "freebsd": [
           {
@@ -15,7 +15,7 @@
           },
           {
             "name": "FreeBSD-blocklist",
-            "version": "15.0"
+            "version": "15.0p3"
           },
           {
             "name": "FreeBSD-bzip2-lib",
@@ -163,24 +163,32 @@
           }
         ],
         "dotnet": [],
-        "python": [],
+        "go": [],
+        "java": [],
         "node": [],
-        "go": []
+        "php": [],
+        "python": [],
+        "ruby": [],
+        "rust": []
       },
       "summary": {
         "freebsd": 38,
         "dotnet": 0,
-        "python": 0,
-        "node": 0,
         "go": 0,
+        "java": 0,
+        "node": 0,
+        "php": 0,
+        "python": 0,
+        "ruby": 0,
+        "rust": 0,
         "total": 38
       }
     },
     "15": {
       "arch": "amd64",
       "app_version": "15.0",
-      "source": "upstream-binary",
-      "generated": "2026-02-06T00:15:17Z",
+      "source": "upstream",
+      "generated": "2026-02-13T12:05:53Z",
       "packages": {
         "freebsd": [
           {
@@ -189,7 +197,7 @@
           },
           {
             "name": "FreeBSD-blocklist",
-            "version": "15.0"
+            "version": "15.0p3"
           },
           {
             "name": "FreeBSD-bzip2-lib",
@@ -337,16 +345,24 @@
           }
         ],
         "dotnet": [],
-        "python": [],
+        "go": [],
+        "java": [],
         "node": [],
-        "go": []
+        "php": [],
+        "python": [],
+        "ruby": [],
+        "rust": []
       },
       "summary": {
         "freebsd": 38,
         "dotnet": 0,
-        "python": 0,
-        "node": 0,
         "go": 0,
+        "java": 0,
+        "node": 0,
+        "php": 0,
+        "python": 0,
+        "ruby": 0,
+        "rust": 0,
         "total": 38
       }
     }
