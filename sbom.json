@@ -1,12 +1,12 @@
 {
   "image": "nginx-base",
-  "generated": "2026-02-14T14:43:18Z",
+  "generated": "2026-02-16T18:13:44Z",
   "tags": {
     "15-latest": {
       "arch": "amd64",
       "app_version": "15.0",
       "source": "upstream",
-      "generated": "2026-02-14T14:42:49Z",
+      "generated": "2026-02-16T18:12:38Z",
       "packages": {
         "freebsd": [
           {
@@ -135,7 +135,7 @@
           },
           {
             "name": "nginx",
-            "version": "1.28.0_11,3"
+            "version": "1.28.2_11,3"
           },
           {
             "name": "oniguruma",
@@ -188,7 +188,7 @@
       "arch": "amd64",
       "app_version": "15.0",
       "source": "upstream",
-      "generated": "2026-02-14T14:39:55Z",
+      "generated": "2026-02-16T18:13:34Z",
       "packages": {
         "freebsd": [
           {
