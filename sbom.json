@@ -1,12 +1,12 @@
 {
   "image": "nginx-base",
-  "generated": "2026-02-16T18:13:44Z",
+  "generated": "2026-02-17T17:12:42Z",
   "tags": {
     "15-latest": {
       "arch": "amd64",
       "app_version": "15.0",
       "source": "upstream",
-      "generated": "2026-02-16T18:12:38Z",
+      "generated": "2026-02-17T17:11:39Z",
       "packages": {
         "freebsd": [
           {
@@ -188,7 +188,7 @@
       "arch": "amd64",
       "app_version": "15.0",
       "source": "upstream",
-      "generated": "2026-02-16T18:13:34Z",
+      "generated": "2026-02-17T17:12:31Z",
       "packages": {
         "freebsd": [
           {
