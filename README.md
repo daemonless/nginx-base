@@ -10,6 +10,7 @@ Source: dbuild templates
 
 Shared base image for Nginx-based applications.
 
+
 | | |
 |---|---|
 | **Registry** | `ghcr.io/daemonless/nginx-base` |
