@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-26T23:57:49Z",
+  "generated": "2026-05-06T23:10:17Z",
   "image": "nginx-base",
   "tags": {
     "15": {
       "app_version": "15.0",
       "arch": "amd64",
-      "generated": "2026-04-26T23:56:38Z",
+      "generated": "2026-05-06T23:03:49Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -95,7 +95,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0p6"
+            "version": "15.0p8"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -123,7 +123,7 @@
           },
           {
             "name": "FreeBSD-zoneinfo",
-            "version": "15.0"
+            "version": "15.0p7"
           },
           {
             "name": "ca_root_nss",
@@ -187,7 +187,7 @@
     "15-latest": {
       "app_version": "15.0",
       "arch": "amd64",
-      "generated": "2026-04-26T23:56:39Z",
+      "generated": "2026-05-06T23:02:32Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -277,7 +277,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0p6"
+            "version": "15.0p8"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -305,7 +305,7 @@
           },
           {
             "name": "FreeBSD-zoneinfo",
-            "version": "15.0"
+            "version": "15.0p7"
           },
           {
             "name": "ca_root_nss",
@@ -321,7 +321,7 @@
           },
           {
             "name": "nginx",
-            "version": "1.28.3,3"
+            "version": "1.30.0,3"
           },
           {
             "name": "oniguruma",
@@ -333,7 +333,7 @@
           },
           {
             "name": "pkg",
-            "version": "2.7.4"
+            "version": "2.7.5"
           },
           {
             "name": "s6",
