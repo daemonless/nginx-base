@@ -23,6 +23,19 @@ RUN umask 022 && pkg update && \
     pkg clean -ay && \
     rm -rf /var/cache/pkg/* /var/db/pkg/repos/*
 
+# Build FreeBSD 14 compat shim: exports setgroups@FBSD_1.8 via direct syscall.
+# FreeBSD 15 pkg binaries reference setgroups@@FBSD_1.8; on FreeBSD 14 only
+# FBSD_1.0 exists in libc. The run script LD_PRELOADs this when uname -r < 15.
+RUN pkg install -y FreeBSD-clang FreeBSD-clibs-dev && \
+    printf '#include <sys/types.h>\n#include <sys/syscall.h>\n#include <unistd.h>\n__asm__(".symver _sg_compat, setgroups@FBSD_1.8");\nint _sg_compat(int n, const gid_t *g) { return syscall(80, n, g); }\n' \
+    > /tmp/fbsd14compat.c && \
+    printf 'FBSD_1.8 { global: setgroups; local: *; };\n' > /tmp/fbsd14compat.map && \
+    clang -shared -fPIC -Wl,--version-script=/tmp/fbsd14compat.map \
+    -o /usr/local/lib/libfbsd14compat.so /tmp/fbsd14compat.c && \
+    rm /tmp/fbsd14compat.c /tmp/fbsd14compat.map && \
+    pkg remove -y FreeBSD-clang FreeBSD-clibs-dev && \
+    pkg clean -ay
+
 # Create directories (ownership set at runtime by cont-init)
 RUN mkdir -p /var/log/nginx /usr/local/www/html
 
