@@ -1,11 +1,11 @@
 {
-  "generated": "2026-05-21T07:36:21Z",
+  "generated": "2026-05-30T22:37:07Z",
   "image": "nginx-base",
   "tags": {
     "15": {
       "app_version": "15.0",
       "arch": "amd64",
-      "generated": "2026-05-21T07:35:10Z",
+      "generated": "2026-05-30T22:35:07Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -55,7 +55,7 @@
           },
           {
             "name": "FreeBSD-libcasper",
-            "version": "15.0"
+            "version": "15.0p9"
           },
           {
             "name": "FreeBSD-libcompiler_rt-dev",
@@ -103,7 +103,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0p8"
+            "version": "15.0p9"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -115,7 +115,7 @@
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.0p1"
+            "version": "15.0p9"
           },
           {
             "name": "FreeBSD-xz-lib",
@@ -135,7 +135,7 @@
           },
           {
             "name": "ca_root_nss",
-            "version": "3.123.1"
+            "version": "3.124"
           },
           {
             "name": "execline",
@@ -147,7 +147,7 @@
           },
           {
             "name": "nginx",
-            "version": "1.30.1,3"
+            "version": "1.30.2,3"
           },
           {
             "name": "oniguruma",
@@ -195,7 +195,7 @@
     "15-latest": {
       "app_version": "15.0",
       "arch": "amd64",
-      "generated": "2026-05-21T07:35:05Z",
+      "generated": "2026-05-30T22:35:56Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -245,7 +245,7 @@
           },
           {
             "name": "FreeBSD-libcasper",
-            "version": "15.0"
+            "version": "15.0p9"
           },
           {
             "name": "FreeBSD-libcompiler_rt-dev",
@@ -293,7 +293,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0p8"
+            "version": "15.0p9"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -305,7 +305,7 @@
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.0p1"
+            "version": "15.0p9"
           },
           {
             "name": "FreeBSD-xz-lib",
@@ -325,7 +325,7 @@
           },
           {
             "name": "ca_root_nss",
-            "version": "3.123.1"
+            "version": "3.124"
           },
           {
             "name": "execline",
@@ -337,7 +337,7 @@
           },
           {
             "name": "nginx",
-            "version": "1.30.1_1,3"
+            "version": "1.30.2_2,3"
           },
           {
             "name": "oniguruma",
