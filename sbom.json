@@ -1,11 +1,11 @@
 {
-  "generated": "2026-06-13T09:14:13Z",
+  "generated": "2026-06-16T08:50:20Z",
   "image": "nginx-base",
   "tags": {
     "15": {
       "app_version": "15.0",
       "arch": "amd64",
-      "generated": "2026-06-13T09:12:08Z",
+      "generated": "2026-06-16T08:48:00Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -195,7 +195,7 @@
     "15-latest": {
       "app_version": "15.0",
       "arch": "amd64",
-      "generated": "2026-06-13T09:12:21Z",
+      "generated": "2026-06-16T08:47:21Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -385,7 +385,7 @@
     "15.1": {
       "app_version": "15.1",
       "arch": "amd64",
-      "generated": "2026-06-13T09:11:28Z",
+      "generated": "2026-06-16T08:47:37Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -395,7 +395,7 @@
           },
           {
             "name": "FreeBSD-blocklist",
-            "version": "15.1.rc3.20260606060724"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-bzip2-lib",
@@ -411,7 +411,7 @@
           },
           {
             "name": "FreeBSD-ctf-lib",
-            "version": "15.1.rc3.20260606060724"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-fetch",
@@ -427,7 +427,7 @@
           },
           {
             "name": "FreeBSD-libbsdstat",
-            "version": "15.1.rc3.20260606060724"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-libcasper",
@@ -443,11 +443,11 @@
           },
           {
             "name": "FreeBSD-libldns",
-            "version": "15.1.rc3.20260608235855"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-libmagic",
-            "version": "15.1.rc3.20260606060724"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-libucl",
@@ -487,15 +487,15 @@
           },
           {
             "name": "FreeBSD-tcpd",
-            "version": "15.1.rc3.20260606060724"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-ufs-lib",
-            "version": "15.1.rc3.20260606060724"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.1.rc3.20260608235855"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-xz-lib",
@@ -503,7 +503,7 @@
           },
           {
             "name": "FreeBSD-zfs-lib",
-            "version": "15.1.rc3.20260606060724"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-zlib",
@@ -579,7 +579,7 @@
     "15.1-latest": {
       "app_version": "15.1",
       "arch": "amd64",
-      "generated": "2026-06-13T09:13:00Z",
+      "generated": "2026-06-16T08:49:00Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -589,7 +589,7 @@
           },
           {
             "name": "FreeBSD-blocklist",
-            "version": "15.1.rc3.20260606060724"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-bzip2-lib",
@@ -605,7 +605,7 @@
           },
           {
             "name": "FreeBSD-ctf-lib",
-            "version": "15.1.rc3.20260606060724"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-fetch",
@@ -621,7 +621,7 @@
           },
           {
             "name": "FreeBSD-libbsdstat",
-            "version": "15.1.rc3.20260606060724"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-libcasper",
@@ -637,11 +637,11 @@
           },
           {
             "name": "FreeBSD-libldns",
-            "version": "15.1.rc3.20260608235855"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-libmagic",
-            "version": "15.1.rc3.20260606060724"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-libucl",
@@ -681,15 +681,15 @@
           },
           {
             "name": "FreeBSD-tcpd",
-            "version": "15.1.rc3.20260606060724"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-ufs-lib",
-            "version": "15.1.rc3.20260606060724"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.1.rc3.20260608235855"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-xz-lib",
@@ -697,7 +697,7 @@
           },
           {
             "name": "FreeBSD-zfs-lib",
-            "version": "15.1.rc3.20260606060724"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-zlib",
