@@ -1,11 +1,11 @@
 {
-  "generated": "2026-06-16T08:50:20Z",
+  "generated": "2026-06-16T20:38:17Z",
   "image": "nginx-base",
   "tags": {
     "15": {
       "app_version": "15.0",
       "arch": "amd64",
-      "generated": "2026-06-16T08:48:00Z",
+      "generated": "2026-06-16T20:34:53Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -195,7 +195,7 @@
     "15-latest": {
       "app_version": "15.0",
       "arch": "amd64",
-      "generated": "2026-06-16T08:47:21Z",
+      "generated": "2026-06-16T20:35:49Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -385,7 +385,7 @@
     "15.1": {
       "app_version": "15.1",
       "arch": "amd64",
-      "generated": "2026-06-16T08:47:37Z",
+      "generated": "2026-06-16T20:37:03Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -579,7 +579,7 @@
     "15.1-latest": {
       "app_version": "15.1",
       "arch": "amd64",
-      "generated": "2026-06-16T08:49:00Z",
+      "generated": "2026-06-16T20:34:58Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
