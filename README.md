@@ -41,11 +41,58 @@ services:
     restart: unless-stopped
 ```
 
+### AppJail Director
+
+**.env**:
+
+```
+# .env
+
+DIRECTOR_PROJECT=nginx-base
+```
+
+**appjail-director.yml**:
+
+```yaml
+# appjail-director.yml
+
+options:
+  - virtualnet: ':<random> default'
+  - nat:
+services:
+  nginx-base:
+    name: nginx_base
+    options:
+      - container: 'boot args:--pull'
+```
+
+**Makejail**:
+
+```
+# Makejail 
+
+ARG tag=15
+
+OPTION overwrite=force
+OPTION from=ghcr.io/daemonless/nginx-base:${tag}
+```
+
 ### Podman CLI
 
 ```bash
 podman run -d --name nginx-base \
   ghcr.io/daemonless/nginx-base:latest
+```
+
+### AppJail
+
+```bash
+appjail oci run -Pd \
+  -o overwrite=force \
+  -o container="args:--pull" \
+  -o virtualnet=":<random> default" \
+  -o nat \
+  ghcr.io/daemonless/nginx-base:latest nginx-base
 ```
 
 ### Ansible
@@ -61,7 +108,7 @@ podman run -d --name nginx-base \
 
 **Architectures:** amd64
 **User:** `root` (UID/GID via PUID/PGID, defaults to 1000:1000)
-**Base:** FreeBSD 15.0
+**Base:** FreeBSD 15.1
 
 ---
 
