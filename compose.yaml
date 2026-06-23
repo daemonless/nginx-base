@@ -9,6 +9,7 @@ x-daemonless:
   web_url: "https://nginx.org/"
   user: "root"
   upstream_binary: false
+  appjail: true
   
   docs: {}
 
