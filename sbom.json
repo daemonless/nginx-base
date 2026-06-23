@@ -1,11 +1,11 @@
 {
-  "generated": "2026-06-16T20:38:17Z",
+  "generated": "2026-06-23T17:42:19Z",
   "image": "nginx-base",
   "tags": {
     "15": {
       "app_version": "15.0",
       "arch": "amd64",
-      "generated": "2026-06-16T20:34:53Z",
+      "generated": "2026-06-23T17:41:08Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -147,7 +147,7 @@
           },
           {
             "name": "nginx",
-            "version": "1.30.2,3"
+            "version": "1.30.3,3"
           },
           {
             "name": "oniguruma",
@@ -195,7 +195,7 @@
     "15-latest": {
       "app_version": "15.0",
       "arch": "amd64",
-      "generated": "2026-06-16T20:35:49Z",
+      "generated": "2026-06-23T17:40:41Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -337,7 +337,7 @@
           },
           {
             "name": "nginx",
-            "version": "1.30.2_2,3"
+            "version": "1.30.3,3"
           },
           {
             "name": "oniguruma",
@@ -385,7 +385,7 @@
     "15.1": {
       "app_version": "15.1",
       "arch": "amd64",
-      "generated": "2026-06-16T20:37:03Z",
+      "generated": "2026-06-23T17:40:53Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -531,7 +531,7 @@
           },
           {
             "name": "nginx",
-            "version": "1.30.2,3"
+            "version": "1.30.3,3"
           },
           {
             "name": "oniguruma",
@@ -579,7 +579,7 @@
     "15.1-latest": {
       "app_version": "15.1",
       "arch": "amd64",
-      "generated": "2026-06-16T20:34:58Z",
+      "generated": "2026-06-23T17:39:53Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -725,7 +725,7 @@
           },
           {
             "name": "nginx",
-            "version": "1.30.2_2,3"
+            "version": "1.30.3,3"
           },
           {
             "name": "oniguruma",
