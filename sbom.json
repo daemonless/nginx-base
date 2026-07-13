@@ -1,11 +1,11 @@
 {
-  "generated": "2026-07-02T23:35:13Z",
+  "generated": "2026-07-13T21:58:01Z",
   "image": "nginx-base",
   "tags": {
     "15": {
       "app_version": "15.0",
       "arch": "amd64",
-      "generated": "2026-07-02T23:34:01Z",
+      "generated": "2026-07-13T21:56:23Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -135,7 +135,7 @@
           },
           {
             "name": "ca_root_nss",
-            "version": "3.124"
+            "version": "3.125"
           },
           {
             "name": "execline",
@@ -143,11 +143,11 @@
           },
           {
             "name": "jq",
-            "version": "1.8.1"
+            "version": "1.8.2"
           },
           {
             "name": "nginx",
-            "version": "1.30.3,3"
+            "version": "1.30.3_2,3"
           },
           {
             "name": "oniguruma",
@@ -159,7 +159,7 @@
           },
           {
             "name": "pkg",
-            "version": "2.6.2_1"
+            "version": "2.7.5"
           },
           {
             "name": "s6",
@@ -195,7 +195,7 @@
     "15-latest": {
       "app_version": "15.0",
       "arch": "amd64",
-      "generated": "2026-07-02T23:33:03Z",
+      "generated": "2026-07-13T21:56:13Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -325,7 +325,7 @@
           },
           {
             "name": "ca_root_nss",
-            "version": "3.124"
+            "version": "3.125"
           },
           {
             "name": "execline",
@@ -337,7 +337,7 @@
           },
           {
             "name": "nginx",
-            "version": "1.30.3_1,3"
+            "version": "1.30.3_2,3"
           },
           {
             "name": "oniguruma",
@@ -385,7 +385,7 @@
     "15.1": {
       "app_version": "15.1",
       "arch": "amd64",
-      "generated": "2026-07-02T23:34:04Z",
+      "generated": "2026-07-13T21:56:11Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -519,7 +519,7 @@
           },
           {
             "name": "ca_root_nss",
-            "version": "3.124"
+            "version": "3.125"
           },
           {
             "name": "execline",
@@ -527,11 +527,11 @@
           },
           {
             "name": "jq",
-            "version": "1.8.1"
+            "version": "1.8.2"
           },
           {
             "name": "nginx",
-            "version": "1.30.3,3"
+            "version": "1.30.3_2,3"
           },
           {
             "name": "oniguruma",
@@ -543,7 +543,7 @@
           },
           {
             "name": "pkg",
-            "version": "2.6.2_1"
+            "version": "2.7.5"
           },
           {
             "name": "s6",
@@ -579,7 +579,7 @@
     "15.1-latest": {
       "app_version": "15.1",
       "arch": "amd64",
-      "generated": "2026-07-02T23:33:51Z",
+      "generated": "2026-07-13T21:56:50Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -713,7 +713,7 @@
           },
           {
             "name": "ca_root_nss",
-            "version": "3.124"
+            "version": "3.125"
           },
           {
             "name": "execline",
@@ -725,7 +725,7 @@
           },
           {
             "name": "nginx",
-            "version": "1.30.3_1,3"
+            "version": "1.30.3_2,3"
           },
           {
             "name": "oniguruma",
