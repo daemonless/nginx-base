@@ -1,11 +1,11 @@
 {
-  "generated": "2026-07-13T21:58:01Z",
+  "generated": "2026-07-18T21:07:27Z",
   "image": "nginx-base",
   "tags": {
     "15": {
       "app_version": "15.0",
       "arch": "amd64",
-      "generated": "2026-07-13T21:56:23Z",
+      "generated": "2026-07-18T21:04:33Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -75,6 +75,10 @@
           },
           {
             "name": "FreeBSD-libucl",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-locales",
             "version": "15.0"
           },
           {
@@ -181,7 +185,7 @@
       "source": "upstream",
       "summary": {
         "dotnet": 0,
-        "freebsd": 40,
+        "freebsd": 41,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -189,13 +193,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 40
+        "total": 41
       }
     },
     "15-latest": {
       "app_version": "15.0",
       "arch": "amd64",
-      "generated": "2026-07-13T21:56:13Z",
+      "generated": "2026-07-18T21:06:17Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -265,6 +269,10 @@
           },
           {
             "name": "FreeBSD-libucl",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-locales",
             "version": "15.0"
           },
           {
@@ -371,7 +379,7 @@
       "source": "upstream",
       "summary": {
         "dotnet": 0,
-        "freebsd": 40,
+        "freebsd": 41,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -379,13 +387,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 40
+        "total": 41
       }
     },
     "15.1": {
       "app_version": "15.1",
       "arch": "amd64",
-      "generated": "2026-07-13T21:56:11Z",
+      "generated": "2026-07-18T21:05:05Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -451,6 +459,10 @@
           },
           {
             "name": "FreeBSD-libucl",
+            "version": "15.1"
+          },
+          {
+            "name": "FreeBSD-locales",
             "version": "15.1"
           },
           {
@@ -565,7 +577,7 @@
       "source": "upstream",
       "summary": {
         "dotnet": 0,
-        "freebsd": 41,
+        "freebsd": 42,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -573,13 +585,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 41
+        "total": 42
       }
     },
     "15.1-latest": {
       "app_version": "15.1",
       "arch": "amd64",
-      "generated": "2026-07-13T21:56:50Z",
+      "generated": "2026-07-18T21:04:05Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -645,6 +657,10 @@
           },
           {
             "name": "FreeBSD-libucl",
+            "version": "15.1"
+          },
+          {
+            "name": "FreeBSD-locales",
             "version": "15.1"
           },
           {
@@ -759,7 +775,7 @@
       "source": "upstream",
       "summary": {
         "dotnet": 0,
-        "freebsd": 41,
+        "freebsd": 42,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -767,7 +783,7 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 41
+        "total": 42
       }
     }
   }
