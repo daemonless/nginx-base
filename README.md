@@ -17,16 +17,12 @@ Shared base image for Nginx-based applications.
 | **Website** | [https://nginx.org/](https://nginx.org/) |
 
 ## Version Tags
-
 | Tag | Description | Best For |
 | :--- | :--- | :--- |
-| `15` | **FreeBSD Port**. Built from FreeBSD packages. | Production stability. |
-| `15-latest` | **FreeBSD Latest**. Rolling package updates. | Newest FreeBSD packages. |
-| `15.1` / `latest` / `pkg` | **FreeBSD Port**. Built from FreeBSD packages. | Production stability. |
-| `15.1-latest` / `pkg-latest` | **FreeBSD Latest**. Rolling package updates. | Newest FreeBSD packages. |
+| `15` / `15.1` / `latest` / `pkg` | **FreeBSD Port**. Built from FreeBSD packages. | Production stability. |
+| `15-latest` / `15.1-latest` / `pkg-latest` | **FreeBSD Latest**. Rolling package updates. | Newest FreeBSD packages. |
 
 ## Prerequisites
-
 Before deploying, ensure your host environment is ready. See the [Quick Start Guide](https://daemonless.io/guides/quick-start) for host setup instructions.
 
 ## Deployment
@@ -42,7 +38,6 @@ services:
 ```
 
 ### AppJail Director
-
 **.env**:
 
 ```
@@ -69,9 +64,9 @@ services:
 **Makejail**:
 
 ```
-# Makejail 
+# Makejail
 
-ARG tag=15
+ARG tag=15.1
 
 OPTION overwrite=force
 OPTION from=ghcr.io/daemonless/nginx-base:${tag}
@@ -106,7 +101,7 @@ appjail oci run -Pd \
     restart_policy: always
 ```
 
-**Architectures:** amd64
+**Architectures:** amd64, aarch64
 **User:** `root` (UID/GID via PUID/PGID, defaults to 1000:1000)
 **Base:** FreeBSD 15.1
 
