@@ -1,0 +1,51 @@
+ARG BASE_VERSION=15
+FROM ghcr.io/daemonless/base:${BASE_VERSION}-aarch64
+
+ARG FREEBSD_ARCH=amd64
+ARG PACKAGES="nginx"
+
+LABEL org.opencontainers.image.title="nginx-base" \
+    org.opencontainers.image.description="FreeBSD nginx base image with s6 supervision" \
+    org.opencontainers.image.source="https://github.com/daemonless/nginx-base" \
+    org.opencontainers.image.url="https://nginx.org/" \
+    org.opencontainers.image.documentation="https://nginx.org/en/docs/" \
+    org.opencontainers.image.licenses="BSD-2-Clause" \
+    org.opencontainers.image.vendor="daemonless" \
+    org.opencontainers.image.authors="daemonless" \
+    io.daemonless.type="base" \
+    io.daemonless.category="Base" \
+    io.daemonless.packages="${PACKAGES}"
+
+# Install nginx
+# Note: umask 022 ensures directories are created with correct permissions
+RUN umask 022 && pkg update && \
+    pkg install -y ${PACKAGES} && \
+    pkg clean -ay && \
+    rm -rf /var/cache/pkg/* /var/db/pkg/repos/*
+
+# Build FreeBSD 14 compat shim: exports setgroups@FBSD_1.8 via direct syscall.
+# FreeBSD 15 pkg binaries reference setgroups@@FBSD_1.8; on FreeBSD 14 only
+# FBSD_1.0 exists in libc. The run script LD_PRELOADs this when uname -r < 15.
+RUN pkg install -y FreeBSD-clang FreeBSD-clibs-dev && \
+    printf '#include <sys/types.h>\n#include <sys/syscall.h>\n#include <unistd.h>\n__asm__(".symver _sg_compat, setgroups@FBSD_1.8");\nint _sg_compat(int n, const gid_t *g) { return syscall(80, n, g); }\n' \
+    > /tmp/fbsd14compat.c && \
+    printf 'FBSD_1.8 { global: setgroups; local: *; };\n' > /tmp/fbsd14compat.map && \
+    clang -shared -fPIC -Wl,--version-script=/tmp/fbsd14compat.map \
+    -o /usr/local/lib/libfbsd14compat.so /tmp/fbsd14compat.c && \
+    rm /tmp/fbsd14compat.c /tmp/fbsd14compat.map && \
+    pkg remove -y FreeBSD-clang FreeBSD-clibs-dev && \
+    pkg clean -ay
+
+# Create directories (ownership set at runtime by cont-init)
+RUN mkdir -p /var/log/nginx /usr/local/www/html
+
+# Copy nginx service and default config
+COPY root/ /
+
+# Make scripts executable
+RUN chmod +x /etc/services.d/nginx/run /etc/cont-init.d/* 2>/dev/null || true
+
+STOPSIGNAL SIGQUIT
+
+EXPOSE 80 443
+
