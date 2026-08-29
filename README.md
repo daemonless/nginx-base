@@ -34,8 +34,11 @@ services:
   nginx-base:
     image: "ghcr.io/daemonless/nginx-base:latest"
     container_name: nginx-base
-    restart: unless-stopped
+    # always (not unless-stopped) so FreeBSD's podman rc.d auto-starts it at boot
+    restart: always
 ```
+
+Save as `compose.yaml`, then run `podman-compose up -d`.
 
 ### AppJail Director
 **.env**:
@@ -72,12 +75,16 @@ OPTION overwrite=force
 OPTION from=ghcr.io/daemonless/nginx-base:${tag}
 ```
 
+Save the files above, then run `appjail-director up`.
+
 ### Podman CLI
 
 ```bash
 podman run -d --name nginx-base \
   ghcr.io/daemonless/nginx-base:latest
 ```
+
+Save as `run.sh`, then run `sh run.sh`.
 
 ### AppJail
 
@@ -90,6 +97,28 @@ appjail oci run -Pd \
   ghcr.io/daemonless/nginx-base:latest nginx-base
 ```
 
+Save as `run.sh`, then run `sh run.sh`.
+
+### Bastille
+
+> [!WARNING]
+> Bastille's OCI support is **experimental**. It requires `buildah`, shares the host network stack (`inherit`), and persists image-declared volumes under `--data-path`.
+
+```yaml
+services:
+  nginx-base:
+    image: "ghcr.io/daemonless/nginx-base:latest"
+    container_name: nginx-base
+    network_mode: host  # jail shares host networking
+```
+
+Save as `podman-compose.yml`, then run `bastille up`. Or via CLI:
+
+```bash
+bastille create -O \
+  nginx-base ghcr.io/daemonless/nginx-base:latest inherit
+```
+
 ### Ansible
 
 ```yaml
@@ -100,6 +129,8 @@ appjail oci run -Pd \
     state: started
     restart_policy: always
 ```
+
+Save as `nginx-base-deploy.yaml`, then run `ansible-playbook nginx-base-deploy.yaml`.
 
 **Architectures:** amd64, aarch64
 **User:** `root` (UID/GID via PUID/PGID, defaults to 1000:1000)

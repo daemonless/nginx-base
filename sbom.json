@@ -1,11 +1,11 @@
 {
-  "generated": "2026-08-20T13:53:01Z",
+  "generated": "2026-08-29T17:23:45Z",
   "image": "nginx-base",
   "tags": {
     "15.1-amd64": {
       "app_version": "15.1",
       "arch": "amd64",
-      "generated": "2026-08-20T13:51:26Z",
+      "generated": "2026-08-29T17:22:13Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -154,7 +154,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-openssl-lib",
-            "version": "15.1"
+            "version": "15.1p3"
           },
           {
             "licenses": [
@@ -182,7 +182,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p2"
+            "version": "15.1p3"
           },
           {
             "licenses": [
@@ -245,7 +245,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.126.1"
+            "version": "3.127"
           },
           {
             "licenses": [
@@ -329,7 +329,7 @@
     "15.1-latest-amd64": {
       "app_version": "15.1",
       "arch": "amd64",
-      "generated": "2026-08-20T13:52:09Z",
+      "generated": "2026-08-29T17:22:59Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -478,7 +478,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-openssl-lib",
-            "version": "15.1"
+            "version": "15.1p3"
           },
           {
             "licenses": [
@@ -506,7 +506,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p2"
+            "version": "15.1p3"
           },
           {
             "licenses": [
@@ -569,7 +569,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.126.1"
+            "version": "3.127"
           },
           {
             "licenses": [
@@ -590,7 +590,7 @@
               "BSD2CLAUSE"
             ],
             "name": "nginx",
-            "version": "1.30.4_4,3"
+            "version": "1.30.4_5,3"
           },
           {
             "licenses": [
