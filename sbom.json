@@ -1,11 +1,11 @@
 {
-  "generated": "2026-08-29T17:23:45Z",
+  "generated": "2026-09-15T13:20:46Z",
   "image": "nginx-base",
   "tags": {
     "15.1-amd64": {
       "app_version": "15.1",
       "arch": "amd64",
-      "generated": "2026-08-29T17:22:13Z",
+      "generated": "2026-09-15T13:19:56Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -245,7 +245,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.127"
+            "version": "3.129"
           },
           {
             "licenses": [
@@ -329,7 +329,7 @@
     "15.1-latest-amd64": {
       "app_version": "15.1",
       "arch": "amd64",
-      "generated": "2026-08-29T17:22:59Z",
+      "generated": "2026-09-15T13:18:09Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -569,7 +569,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.127"
+            "version": "3.129"
           },
           {
             "licenses": [
@@ -590,7 +590,7 @@
               "BSD2CLAUSE"
             ],
             "name": "nginx",
-            "version": "1.30.4_5,3"
+            "version": "1.30.4_9,3"
           },
           {
             "licenses": [
@@ -604,7 +604,7 @@
               "BSD3CLAUSE"
             ],
             "name": "pcre2",
-            "version": "10.47_1"
+            "version": "10.48"
           },
           {
             "licenses": [

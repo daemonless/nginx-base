@@ -7,6 +7,7 @@ Source: dbuild templates
 
 [![Build Status](https://img.shields.io/github/actions/workflow/status/daemonless/nginx-base/build.yaml?style=flat-square&label=Build&color=green)](https://github.com/daemonless/nginx-base/actions)
 [![Last Commit](https://img.shields.io/github/last-commit/daemonless/nginx-base?style=flat-square&label=Last+Commit&color=blue)](https://github.com/daemonless/nginx-base/commits)
+[![OCI Pulls](https://img.shields.io/docker/pulls/daemonless/nginx-base?style=flat-square&label=OCI+Pulls&color=blue)](https://hub.docker.com/r/daemonless/nginx-base)
 
 Shared base image for Nginx-based applications.
 
@@ -61,7 +62,7 @@ services:
   nginx-base:
     name: nginx_base
     options:
-      - container: 'boot args:--pull'
+      - container: 'args:--pull'
 ```
 
 **Makejail**:
@@ -71,11 +72,14 @@ services:
 
 ARG tag=15.1
 
+OPTION container=boot
 OPTION overwrite=force
 OPTION from=ghcr.io/daemonless/nginx-base:${tag}
 ```
 
 Save the files above, then run `appjail-director up`.
+
+
 
 ### Podman CLI
 
@@ -88,6 +92,7 @@ Save as `run.sh`, then run `sh run.sh`.
 
 ### AppJail
 
+
 ```bash
 appjail oci run -Pd \
   -o overwrite=force \
@@ -97,22 +102,25 @@ appjail oci run -Pd \
   ghcr.io/daemonless/nginx-base:latest nginx-base
 ```
 
-Save as `run.sh`, then run `sh run.sh`.
+Save the files above, then run `sh run.sh`.
+
+
 
 ### Bastille
 
 > [!WARNING]
-> Bastille's OCI support is **experimental**. It requires `buildah`, shares the host network stack (`inherit`), and persists image-declared volumes under `--data-path`.
+> Bastille's OCI support is **experimental**. It requires `buildah` and shares the host network stack (`inherit`). Mount volumes with `--volume HOST JAIL`; without it, image-declared volumes are stored under `${bastille_volumesdir}/${jail}`.
 
 ```yaml
 services:
   nginx-base:
+    name: nginx-base
     image: "ghcr.io/daemonless/nginx-base:latest"
-    container_name: nginx-base
-    network_mode: host  # jail shares host networking
+    network:
+      - mode: host
 ```
 
-Save as `podman-compose.yml`, then run `bastille up`. Or via CLI:
+Save as `bastille-compose.yml`, then run `bastille up`. Or via CLI:
 
 ```bash
 bastille create -O \
