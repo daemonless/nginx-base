@@ -2,6 +2,7 @@ name: nginx-base
 
 x-daemonless:
   title: "Nginx Base"
+  class: "base"  # built FROM, not deployed: no Deployment section
   icon: ":simple-nginx:"
   category: "Base"
   description: "Shared base image for Nginx-based applications."
