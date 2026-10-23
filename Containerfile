@@ -1,11 +1,11 @@
 ARG BASE_VERSION=15
-FROM ghcr.io/daemonless/base:${BASE_VERSION}
+FROM ghcr.io/daemonless/base-rcd:${BASE_VERSION}
 
 ARG FREEBSD_ARCH=amd64
 ARG PACKAGES="nginx"
 
 LABEL org.opencontainers.image.title="nginx-base" \
-    org.opencontainers.image.description="FreeBSD nginx base image with s6 supervision" \
+    org.opencontainers.image.description="FreeBSD nginx base image with rcd supervision" \
     org.opencontainers.image.source="https://github.com/daemonless/nginx-base" \
     org.opencontainers.image.url="https://nginx.org/" \
     org.opencontainers.image.documentation="https://nginx.org/en/docs/" \
@@ -43,9 +43,8 @@ RUN mkdir -p /var/log/nginx /usr/local/www/html
 COPY root/ /
 
 # Make scripts executable
-RUN chmod +x /etc/services.d/nginx/run /etc/cont-init.d/* 2>/dev/null || true
+RUN chmod +x /daemonless/libexec/* /daemonless/init.d/*
 
-STOPSIGNAL SIGQUIT
 
 EXPOSE 80 443
 
