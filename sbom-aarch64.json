@@ -1,11 +1,11 @@
 {
-  "generated": "2026-10-24T10:06:34Z",
+  "generated": "2026-10-29T07:31:46Z",
   "image": "nginx-base",
   "tags": {
     "15.1-aarch64": {
       "app_version": "15.1",
       "arch": "aarch64",
-      "generated": "2026-10-24T10:05:09Z",
+      "generated": "2026-10-29T07:29:54Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -189,7 +189,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p5"
+            "version": "15.1p6"
           },
           {
             "licenses": [
@@ -315,7 +315,7 @@
     "15.1-latest-aarch64": {
       "app_version": "15.1",
       "arch": "aarch64",
-      "generated": "2026-10-24T10:05:14Z",
+      "generated": "2026-10-29T07:29:59Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -499,7 +499,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p5"
+            "version": "15.1p6"
           },
           {
             "licenses": [
